@@ -3,24 +3,10 @@
 
 y -= 2;
 
-//when we are at the target position, check if we hit anything
+//when we are at the target position, return to our oKoala self
 if (y == finalPos)
 {
-	//check if we hit TNT
-	if (instance_place(x, y, oTNT))
-	{
-		instance_change(oDeadKoala, true);
-	}
-	//check if we hit and exit
-	else if (instance_place(x, y, oExit1))
-	{
-		instance_destroy();
-	}
-	//if we didn't hit anything, return to our oKoala self
-	else
-	{
-		instance_change(oKoala, true);
-	}
+	instance_change(oKoala, true);
 }
 
 
